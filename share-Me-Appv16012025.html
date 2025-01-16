@@ -1,265 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShareMeApp</title>
-  <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-  }
-  .container {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
-  }
-  h2 {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  textarea {
-    width: 100%;
-    max-width: 650px; /* Increased size of the text box to match button width */
-    min-height: 120px;
-    padding: 12px; /* Increased padding for better text visibility */
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    resize: vertical;
-    font-size: 1em;
-    outline: none;
-    transition: border-color 0.3s ease, transform 0.2s ease;
-    font-family: monospace;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  textarea:focus {
-    border-color: #007bff;
-    transform: scale(1.02); /* Slight animation on focus */
-  }
-  input[type="password"] {
-    width: 100%;
-    max-width: 300px; /* Keep the password input size the same as before */
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1em;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  input[type="password"]:focus {
-    border-color: #007bff;
-  }
-  button {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: #fff;
-    border: none;
-    padding: 12px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px; /* Keep the button width the same as before */
-    font-size: 1em;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    margin: 10px 0;
-  }
-  button:hover {
-    background: linear-gradient(135deg, #0056b3, #003d80);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Shadow effect on hover */
-  }
-  button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Slight shadow effect when active */
-  }
-  #security-code-display {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #333;
-  }
-  .message {
-    margin-top: 10px;
-    color: #555;
-    font-size: 0.9em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    text-align: center;
-  }
-  .footer {
-    margin-top: 15px;
-    font-size: 0.8em;
-    color: #777;
-    text-align: center;
-  }
-</style>
-
-
-</head>
-<body>
-  <div class="container">
-    <h1>ShareMeApp</h1>
-    <h2>Syed Mubeen App</h2>
-
-    <div id="main-section">
-      <textarea id="text-input" placeholder="Enter your text here"></textarea>
-      <div id="security-code-display">
-        <label>Your Security Code: </label>
-        <span id="security-code">123</span>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ShareMeApp</title>
+      <style>
+         body {
+         font-family: 'Roboto', sans-serif;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         box-sizing: border-box;
+         background-color: #f9f9f9;
+         }
+         .container {
+         width: 100%;
+         max-width: 800px;
+         padding: 20px;
+         box-sizing: border-box;
+         text-align: center;
+         }
+         h1 {
+         font-size: 2em;
+         margin-bottom: 5px;
+         }
+         h2 {
+         font-size: 1em;
+         color: #555;
+         margin-bottom: 15px;
+         }
+         textarea {
+         width: 100%;
+         max-width: 650px; /* Increased size of the text box to match button width */
+         min-height: 120px;
+         padding: 12px; /* Increased padding for better text visibility */
+         margin: 10px 0;
+         border: 2px solid #ccc;
+         border-radius: 8px;
+         resize: vertical;
+         font-size: 1em;
+         outline: none;
+         transition: border-color 0.3s ease, transform 0.2s ease;
+         font-family: monospace;
+         white-space: pre-wrap;
+         word-wrap: break-word;
+         }
+         textarea:focus {
+         border-color: #007bff;
+         transform: scale(1.02); /* Slight animation on focus */
+         }
+         input[type="password"] {
+         width: 100%;
+         max-width: 300px; /* Keep the password input size the same as before */
+         padding: 10px;
+         margin: 10px 0;
+         border: 2px solid #ccc;
+         border-radius: 8px;
+         text-align: center;
+         font-size: 1em;
+         outline: none;
+         transition: border-color 0.3s ease;
+         }
+         input[type="password"]:focus {
+         border-color: #007bff;
+         }
+         button {
+         background: linear-gradient(135deg, #007bff, #0056b3);
+         color: #fff;
+         border: none;
+         padding: 12px 15px;
+         border-radius: 8px;
+         cursor: pointer;
+         width: 100%;
+         max-width: 300px; /* Keep the button width the same as before */
+         font-size: 1em;
+         transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+         margin: 10px 0;
+         }
+         button:hover {
+         background: linear-gradient(135deg, #0056b3, #003d80);
+         transform: translateY(-2px);
+         box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Shadow effect on hover */
+         }
+         button:active {
+         transform: translateY(0);
+         box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Slight shadow effect when active */
+         }
+         #security-code-display {
+         margin: 10px 0;
+         font-size: 1em;
+         color: #333;
+         }
+         .message {
+         margin-top: 10px;
+         color: #555;
+         font-size: 0.9em;
+         white-space: pre-wrap;
+         word-wrap: break-word;
+         text-align: center;
+         }
+         .footer {
+         margin-top: 15px;
+         font-size: 0.8em;
+         color: #777;
+         text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>ShareMeApp</h1>
+         <h2>Syed Mubeen App</h2>
+         <div id="main-section">
+            <textarea id="text-input" placeholder="Enter your text here"></textarea>
+            <div id="security-code-display">
+               <label>Your Security Code: </label>
+               <span id="security-code">123</span>
+            </div>
+            <button id="save-button">Save Text</button>
+            <button id="update-button">Update Text</button> <!-- New Update Text Button -->
+            <textarea id="access-text" placeholder="Text will appear here" readonly></textarea>
+            <input type="password" id="access-code" placeholder="Enter security code" />
+            <button id="access-button">Access Text</button>
+         </div>
+         <div class="message" id="message"></div>
+         <div class="footer">ShareMeApp created by Syed Mubeen A</div>
       </div>
-      <button id="save-button">Save Text</button>
-      <button id="update-button">Update Text</button> <!-- New Update Text Button -->
-      
-      <textarea id="access-text" placeholder="Text will appear here" readonly></textarea>
-      <input type="password" id="access-code" placeholder="Enter security code" />
-      <button id="access-button">Access Text</button>
-    </div>
-
-    <div class="message" id="message"></div>
-    <div class="footer">ShareMeApp created by Syed Mubeen A</div>
-  </div>
-
-  <script>
-    const messageDiv = document.getElementById('message');
-    const accessTextArea = document.getElementById('access-text');
-    const securityCodeSpan = document.getElementById('security-code');
-    let currentSecurityCode = ''; // Dynamically updated security code
-    let currentKey = ''; // Store the dynamically entered key
-
-    // Save text using the API
-    document.getElementById('save-button').addEventListener('click', async () => {
-      const text = document.getElementById('text-input').value;
-      currentKey = prompt("Enter a 2-character key for security code:");
-
-      // Validate the key input (should be exactly 2 characters)
-      if (!currentKey || currentKey.length !== 2) {
-        messageDiv.textContent = 'Invalid key. Please enter exactly 2 characters.';
-        return;
-      }
-
-      if (text) {
-        try {
-          const response = await fetch('https://6788c5262c874e66b7d63895.mockapi.io/text/data', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              message: text,
-              key: currentKey, // Use dynamic key entered by user
-            }),
-          });
-
-          if (!response.ok) {
-            throw new Error('Failed to save text.');
-          }
-
-          const data = await response.json();
-          currentSecurityCode = `${currentKey}${data.id}`; // Create security code dynamically
-          securityCodeSpan.textContent = currentSecurityCode;
-          messageDiv.textContent = 'Text saved successfully!';
-
-          // Store the saved security code in session storage
-          sessionStorage.setItem('shareMeCode', currentSecurityCode);
-        } catch (error) {
-          messageDiv.textContent = `Error: ${error.message}`;
-        }
-      } else {
-        messageDiv.textContent = 'Please enter valid text.';
-      }
-    });
-
-    // Access text using the API and security code
-    document.getElementById('access-button').addEventListener('click', async () => {
-      const code = document.getElementById('access-code').value;
-
-      // Validate the format of the security code
-      if (!code.startsWith(currentKey)) {
-        messageDiv.textContent = 'Invalid security code format.';
-        return;
-      }
-
-      const id = code.slice(currentKey.length); // Extract the ID from the security code
-      if (isNaN(id) || id === '') {
-        messageDiv.textContent = 'Invalid security code format.';
-        return;
-      }
-
-      try {
-        const response = await fetch(`https://6788c5262c874e66b7d63895.mockapi.io/text/data/${id}`);
-
-        if (!response.ok) {
-          throw new Error('Failed to retrieve text.');
-        }
-
-        const data = await response.json();
-        accessTextArea.value = data.message; // Display the message in the text area
-        messageDiv.textContent = 'Text retrieved successfully!';
-      } catch (error) {
-        messageDiv.textContent = `Error: ${error.message}`;
-      }
-    });
-
-    // Update text using the API
-    document.getElementById('update-button').addEventListener('click', async () => {
-      const code = prompt(`Please enter the security code (${currentKey}{id}):`);
-      
-      // Validate the format of the security code
-      if (!code || !code.startsWith(currentKey)) {
-        messageDiv.textContent = 'Invalid security code format.';
-        return;
-      }
-
-      const id = code.slice(currentKey.length); // Extract the ID from the security code
-      if (isNaN(id) || id === '') {
-        messageDiv.textContent = 'Invalid security code format.';
-        return;
-      }
-
-      const updatedText = document.getElementById('text-input').value;
-      if (!updatedText) {
-        messageDiv.textContent = 'Please enter the text you want to update.';
-        return;
-      }
-
-      try {
-        const response = await fetch(`https://6788c5262c874e66b7d63895.mockapi.io/text/data/${id}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            message: updatedText, // Updated message
-            key: currentKey, // Updated key
-          }),
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to update text.');
-        }
-
-        messageDiv.textContent = 'Text updated successfully!';
-      } catch (error) {
-        messageDiv.textContent = `Error: ${error.message}`;
-      }
-    });
-  </script>
-</body>
+      <script>
+         const messageDiv = document.getElementById('message');
+         const accessTextArea = document.getElementById('access-text');
+         const securityCodeSpan = document.getElementById('security-code');
+         let currentSecurityCode = ''; // Dynamically updated security code
+         let currentKey = ''; // Store the dynamically entered key
+         
+         // Save text using the API
+         document.getElementById('save-button').addEventListener('click', async () => {
+           const text = document.getElementById('text-input').value;
+           currentKey = prompt("Enter a 2-character key for security code:");
+         
+           // Validate the key input (should be exactly 2 characters)
+           if (!currentKey || currentKey.length !== 2) {
+             messageDiv.textContent = 'Invalid key. Please enter exactly 2 characters.';
+             return;
+           }
+         
+           if (text) {
+             try {
+               const response = await fetch('https://6788c5262c874e66b7d63895.mockapi.io/text/data', {
+                 method: 'POST',
+                 headers: {
+                   'Content-Type': 'application/json',
+                 },
+                 body: JSON.stringify({
+                   message: text,
+                   key: currentKey, // Use dynamic key entered by user
+                 }),
+               });
+         
+               if (!response.ok) {
+                 throw new Error('Failed to save text.');
+               }
+         
+               const data = await response.json();
+               currentSecurityCode = `${currentKey}${data.id}`; // Create security code dynamically
+               securityCodeSpan.textContent = currentSecurityCode;
+               messageDiv.textContent = 'Text saved successfully!';
+         
+               // Store the saved security code in session storage
+               sessionStorage.setItem('shareMeCode', currentSecurityCode);
+             } catch (error) {
+               messageDiv.textContent = `Error: ${error.message}`;
+             }
+           } else {
+             messageDiv.textContent = 'Please enter valid text.';
+           }
+         });
+         
+         // Access text using the API and security code
+         document.getElementById('access-button').addEventListener('click', async () => {
+           const code = document.getElementById('access-code').value;
+         
+           // Extract the key and ID from the entered code
+           const enteredKey = code.slice(0, 2); // The first 2 characters are the key
+           const id = code.slice(2); // The rest is the ID
+         
+           // Validate the entered code format
+           if (!id || isNaN(id)) {
+             messageDiv.textContent = 'Invalid security code format.';
+             return;
+           }
+         
+           try {
+             // Fetch the data by ID
+             const response = await fetch(`https://6788c5262c874e66b7d63895.mockapi.io/text/data/${id}`);
+         
+             if (!response.ok) {
+               throw new Error('Failed to retrieve text.');
+             }
+         
+             const data = await response.json();
+         
+             // Compare the key from the API response with the entered key
+             if (data.key === enteredKey) {
+               accessTextArea.value = data.message; // Display the message in the text area
+               messageDiv.textContent = 'Text retrieved successfully!';
+             } else {
+               messageDiv.textContent = 'Security code does not match.';
+             }
+           } catch (error) {
+             messageDiv.textContent = `Error: ${error.message}`;
+           }
+         });
+         
+         // Update text using the API
+         document.getElementById('update-button').addEventListener('click', async () => {
+           const code = prompt(`Please enter the security code (${currentKey}{id}):`);
+           
+           // Validate the format of the security code
+           if (!code || !code.startsWith(currentKey)) {
+             messageDiv.textContent = 'Invalid security code format.';
+             return;
+           }
+         
+           const id = code.slice(currentKey.length); // Extract the ID from the security code
+           if (isNaN(id) || id === '') {
+             messageDiv.textContent = 'Invalid security code format.';
+             return;
+           }
+         
+           const updatedText = document.getElementById('text-input').value;
+           if (!updatedText) {
+             messageDiv.textContent = 'Please enter the text you want to update.';
+             return;
+           }
+         
+           try {
+             const response = await fetch(`https://6788c5262c874e66b7d63895.mockapi.io/text/data/${id}`, {
+               method: 'PUT',
+               headers: {
+                 'Content-Type': 'application/json',
+               },
+               body: JSON.stringify({
+                 message: updatedText, // Updated message
+                 key: currentKey, // Updated key
+               }),
+             });
+         
+             if (!response.ok) {
+               throw new Error('Failed to update text.');
+             }
+         
+             messageDiv.textContent = 'Text updated successfully!';
+           } catch (error) {
+             messageDiv.textContent = `Error: ${error.message}`;
+           }
+         });
+      </script>
+   </body>
 </html>

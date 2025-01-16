@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false'
+	xmlns='http://www.w3.org/1999/xhtml'
+	xmlns:b='http://www.google.com/2005/gml/b'
+	xmlns:data='http://www.google.com/2005/gml/data'
+	xmlns:expr='http://www.google.com/2005/gml/expr'>
 	<head>
-		<b:skin><![CDATA[
+		<b:skin>
+			<![CDATA[
 			
-		]]></b:skin>
+		]]>
+		</b:skin>
 		<!-- Adding a simple <style> tag -->
 		<style>
   body {
@@ -189,19 +195,18 @@
     document.getElementById(&#39;access-button&#39;).addEventListener(&#39;click&#39;, async () =&gt; {
       const code = document.getElementById(&#39;access-code&#39;).value;
 
-      // Validate the format of the security code
-      if (!code.startsWith(currentKey)) {
-        messageDiv.textContent = &#39;Invalid security code format.&#39;;
-        return;
-      }
+      // Extract the key and ID from the entered code
+      const enteredKey = code.slice(0, 2); // The first 2 characters are the key
+      const id = code.slice(2); // The rest is the ID
 
-      const id = code.slice(currentKey.length); // Extract the ID from the security code
-      if (isNaN(id) || id === &#39;&#39;) {
+      // Validate the entered code format
+      if (!id || isNaN(id)) {
         messageDiv.textContent = &#39;Invalid security code format.&#39;;
         return;
       }
 
       try {
+        // Fetch the data by ID
         const response = await fetch(`https://6788c5262c874e66b7d63895.mockapi.io/text/data/${id}`);
 
         if (!response.ok) {
@@ -209,8 +214,14 @@
         }
 
         const data = await response.json();
-        accessTextArea.value = data.message; // Display the message in the text area
-        messageDiv.textContent = &#39;Text retrieved successfully!&#39;;
+
+        // Compare the key from the API response with the entered key
+        if (data.key === enteredKey) {
+          accessTextArea.value = data.message; // Display the message in the text area
+          messageDiv.textContent = &#39;Text retrieved successfully!&#39;;
+        } else {
+          messageDiv.textContent = &#39;Security code does not match.&#39;;
+        }
       } catch (error) {
         messageDiv.textContent = `Error: ${error.message}`;
       }
