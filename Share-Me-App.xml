@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+	<head>
+		<b:skin><![CDATA[]]></b:skin>
+		<!-- Adding a simple <style> tag -->
+		<style type='text/css'>
+			body {
+      font-family: &#39;Roboto&#39;, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+			.container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+			h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+          textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 12px;
+      margin: 12px 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      font-size: 1em;
+      outline: none;
+      transition: border-color 0.3s;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    textarea:focus {
+      border-color: #007bff;
+    }
+          input[type=&quot;password&quot;] {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1em;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    input[type=&quot;password&quot;]:focus {
+      border-color: #007bff;
+    }
+          button {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: #fff;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+      font-size: 1em;
+      transition: background 0.3s, transform 0.2s;
+      margin: 10px 0;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #0056b3, #003d80);
+      transform: translateY(-2px);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+          .message {
+      margin-top: 20px;
+      color: #555;
+      font-size: 1em;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      text-align: center;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+    }
+		</style>
+	</head>
+	<body>
+		<!-- Main content section to display blog posts -->
+		<b:section class='blog-posts' id='main' showaddelement='no'/>
+      
+      <div class='container'>
+        <h1>ShareMeApp</h1>
+    <h2>Syed Mubeen App</h2>
+        
+        <div id='main-section'>
+      <textarea id='text-input' placeholder='Enter your text here'/>
+      <input id='security-code' maxlength='4' placeholder='4-digit code' type='password'/>
+      <button id='save-button'>Save Text</button>
+          <textarea id='access-text' placeholder='Text will appear here' readonly='readonly'/>
+          <input id='access-code' maxlength='4' placeholder='Enter security code' type='password'/>
+      <button id='access-button'>Access Text</button>
+    </div>
+        
+        <div class='message' id='message'/>
+    <div class='footer'>ShareMeApp created by Syed Mubeen A</div>
+        </div>
+      
+      
+      
+      
+      <script>
+        const messageDiv = document.getElementById(&#39;message&#39;);
+    const accessTextArea = document.getElementById(&#39;access-text&#39;);
+      
+      
+      // Save text and security code temporarily
+    document.getElementById(&#39;save-button&#39;).addEventListener(&#39;click&#39;, () =&gt; {
+      const text = document.getElementById(&#39;text-input&#39;).value;
+      const code = document.getElementById(&#39;security-code&#39;).value;
+
+      if (text &amp;&amp; code.length === 4 &amp;&amp; /^[0-9]{4}$/.test(code))
+ {
+        sessionStorage.setItem(&#39;shareMeText&#39;, text);
+        sessionStorage.setItem(&#39;shareMeCode&#39;, code);
+        messageDiv.textContent = &#39;Text saved successfully!&#39;;
+        accessTextArea.value = &#39;&#39;;
+      } else {
+        messageDiv.textContent = &#39;Please enter valid text and a 4-digit numeric code.&#39;;
+      }
+    });
+      
+      
+      // Access text with security code
+    document.getElementById(&#39;access-button&#39;).addEventListener(&#39;click&#39;, () =&gt; {
+      const code = document.getElementById(&#39;access-code&#39;).value;
+      const savedCode = sessionStorage.getItem(&#39;shareMeCode&#39;);
+
+      if (code === savedCode) {
+        const text = sessionStorage.getItem(&#39;shareMeText&#39;);
+        accessTextArea.value = text;
+        messageDiv.textContent = &#39;Text retrieved successfully!&#39;;
+      } else {
+        messageDiv.textContent = &#39;Invalid security code.&#39;;
+      }
+    });
+      </script>
+      
+      
+	</body>
+</html>

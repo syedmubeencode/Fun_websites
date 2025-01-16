@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShareMeApp</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 12px;
+      margin: 12px 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      font-size: 1em;
+      outline: none;
+      transition: border-color 0.3s;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    textarea:focus {
+      border-color: #007bff;
+    }
+    input[type="password"] {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1em;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    input[type="password"]:focus {
+      border-color: #007bff;
+    }
+    button {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: #fff;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+      font-size: 1em;
+      transition: background 0.3s, transform 0.2s;
+      margin: 10px 0;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #0056b3, #003d80);
+      transform: translateY(-2px);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    .message {
+      margin-top: 20px;
+      color: #555;
+      font-size: 1em;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      text-align: center;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ShareMeApp</h1>
+    <h2>Syed Mubeen App</h2>
+
+    <div id="main-section">
+      <textarea id="text-input" placeholder="Enter your text here"></textarea>
+      <input type="password" id="security-code" placeholder="4-digit code" maxlength="4" />
+      <button id="save-button">Save Text</button>
+      <textarea id="access-text" placeholder="Text will appear here" readonly></textarea>
+      <input type="password" id="access-code" placeholder="Enter security code" maxlength="4" />
+      <button id="access-button">Access Text</button>
+    </div>
+
+    <div class="message" id="message"></div>
+    <div class="footer">ShareMeApp created by Syed Mubeen A</div>
+  </div>
+
+  <script>
+    const messageDiv = document.getElementById('message');
+    const accessTextArea = document.getElementById('access-text');
+
+    // Save text and security code temporarily
+    document.getElementById('save-button').addEventListener('click', () => {
+      const text = document.getElementById('text-input').value;
+      const code = document.getElementById('security-code').value;
+
+      if (text && code.length === 4 && /^[0-9]{4}$/.test(code)) {
+        sessionStorage.setItem('shareMeText', text);
+        sessionStorage.setItem('shareMeCode', code);
+        messageDiv.textContent = 'Text saved successfully!';
+        accessTextArea.value = '';
+      } else {
+        messageDiv.textContent = 'Please enter valid text and a 4-digit numeric code.';
+      }
+    });
+
+    // Access text with security code
+    document.getElementById('access-button').addEventListener('click', () => {
+      const code = document.getElementById('access-code').value;
+      const savedCode = sessionStorage.getItem('shareMeCode');
+
+      if (code === savedCode) {
+        const text = sessionStorage.getItem('shareMeText');
+        accessTextArea.value = text;
+        messageDiv.textContent = 'Text retrieved successfully!';
+      } else {
+        messageDiv.textContent = 'Invalid security code.';
+      }
+    });
+  </script>
+</body>
+</html>
