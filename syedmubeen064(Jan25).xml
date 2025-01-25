@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false'
+	xmlns='http://www.w3.org/1999/xhtml'
+	xmlns:b='http://www.google.com/2005/gml/b'
+	xmlns:data='http://www.google.com/2005/gml/data'
+	xmlns:expr='http://www.google.com/2005/gml/expr'>
+	<head>
+		<b:if cond='data:blog.url'>
+			<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/images/profile-pic-new.png' rel='icon' type='image/png'/>
+		</b:if>
+		<!-- This is common title -->
+		<title>Syed Mubeen Portfolio</title>
+		<meta charset='utf-8'/>
+		<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
+		<link href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/open-iconic-bootstrap.min.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/animate.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/owl.carousel.min.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/owl.theme.default.min.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/magnific-popup.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/aos.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/ionicons.min.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/flaticon.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/icomoon.css' rel='stylesheet'/>
+		<link href='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/css/style.css' rel='stylesheet'/>
+		<!-- Your CSS styles go here -->
+		<style>
+         /*======================================
+         //--//--&gt;   ABOUT
+         ======================================*/
+         .about-mf .box-shadow-full {
+         padding-top: 4rem;
+         padding-bottom: 4rem;
+         }
+         .about-mf .about-img {
+         margin-bottom: 2rem;
+         }
+         .about-mf .about-img img {
+         margin-left: 10px;
+         }
+         .skill-mf .progress {
+         /* background-color: #cde1f8; */
+         margin: 0.5rem 0 1.2rem;
+         border-radius: 0;
+         height: 0.7rem;
+         }
+         .skill-mf .progress .progress-bar {
+         height: 0.7rem;
+         background-color: #ffbd39;
+         }
+         /* Animation styles */
+         #typing-animation {
+         position: relative;
+         font-size: 30px;
+         font-weight: bold;
+         color: rgb(255, 255, 255);
+         overflow: hidden;
+         white-space: nowrap;
+         animation: typing 3s steps(20, end) infinite;
+         }
+         #typing-animation:before {
+         content: &quot;&quot;;
+         /* position: absolute; */
+         top: 0;
+         left: 0;
+         width: 0;
+         height: 100%;
+         background-color: #ccc;
+         animation: typing-cursor 0.5s ease-in-out infinite;
+         }
+         @keyframes typing {
+         from {
+         width: 0;
+         }
+         to {
+         width: 100%;
+         }
+         }
+         @keyframes typing-cursor {
+         from {
+         width: 5px;
+         }
+         to {
+         width: 0;
+         }
+         }
+         /* project image zoom effect */
+         .zoom-effect {
+         overflow: hidden;
+         transition: transform 0.3s ease-out;
+         }
+         .zoom-effect:hover {
+         transform: scale(1.1);
+         }
+         @media screen and (orientation: portrait) {
+         body {
+         margin-left: 5%;
+         margin-right: 5%;
+         }
+         .order-md-last {
+         visibility: hidden;
+         }
+         .about-img img {
+         content: url(&quot;https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/images/profile-pic-new.png&quot;);
+         }
+         }
+          
+/* YouTube Button */
+.btn-youtube {
+    background-color: transparent; /* Transparent background */
+    color: #FF0000; /* Red text */
+    border: 2px solid #FF0000; /* Red border */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.btn-youtube:hover {
+    background-color: #FF0000; /* Red background on hover */
+    color: white; /* White text on hover */
+    border: 2px solid #FF0000; /* Red border remains on hover */
+}
+
+          
+
+          
+          
+/* Allow vertical scroll only, but hide the scrollbar */
+html, body {
+    overflow-x: hidden; /* Disables horizontal scrolling */
+    overflow-y: scroll; /* Allows vertical scrolling */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+
+          
+          
+          
+
+
+			<!--
+/* Style for Skills Heading */
+.title-s-new {
+    font-size: 32px; /* Make the font larger */
+    font-weight: bold; /* Make the font bold */
+    color: #2C3E50; /* Dark gray color */
+    text-transform: uppercase; /* Make it uppercase */
+    letter-spacing: 2px; /* Add space between letters */
+    margin-bottom: 20px; /* Add some space below the heading */
+    text-align: center; /* Center the heading */
+    font-family: &#39;Arial&#39;, sans-serif; /* Choose a clean modern font */
+    border-bottom: 3px solid #3498db; /* Add a bottom border with blue color */
+    padding-bottom: 10px; /* Space between text and the border */
+}
+-->
+          
+          
+          
+          
+          
+          
+/* Style for Skills Heading */
+.title-s-new {
+    font-size: 32px; /* Make the font larger */
+    font-weight: bold; /* Make the font bold */
+    color: #FFD700; /* Yellow color for the text */
+    text-transform: uppercase; /* Make it uppercase */
+    letter-spacing: 2px; /* Add space between letters */
+    margin-bottom: 20px; /* Add some space below the heading */
+    text-align: center; /* Center the heading */
+    font-family: &#39;Arial&#39;, sans-serif; /* Choose a clean modern font */
+    
+    /* White border at the bottom */
+    border-bottom: 3px solid #fff; /* White bottom border */
+    padding-bottom: 10px; /* Space between text and the border */
+}
+
+
+
+
+
+
+
+
+
+
+          
+          
+      
+		</style>
+		<b:skin>
+			<![CDATA[
+			
+         
+            /* Your CSS here */
+            
+            
+            
+            
+      
+		]]>
+		</b:skin>
+		<!-- End of your CSS -->
+	</head>
+	<body data-offset='300' data-spy='scroll' data-target='.site-navbar-target'>
+		<!-- below code is about navigation bar which appear on top of your website -->
+		<nav class='navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target' id='ftco-navbar'>
+			<div class='container'>
+				<a class='navbar-brand' href='index.html'>Syed Mubeen</a>
+				<button aria-controls='ftco-nav' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle' data-target='#ftco-nav' data-toggle='collapse' type='button'>
+					<span class='oi oi-menu'/> Menu
+        
+				</button>
+				<div class='collapse navbar-collapse' id='ftco-nav'>
+					<ul class='navbar-nav nav ml-auto'>
+						<li class='nav-item'>
+							<a class='nav-link' href='#home-section'>
+								<span>Home</span>
+							</a>
+						</li>
+						<li class='nav-item'>
+							<a class='nav-link' href='#about-section'>
+								<span>About</span>
+							</a>
+						</li>
+						<li class='nav-item'>
+							<a class='nav-link' href='#resume-section'>
+								<span>Resume</span>
+							</a>
+						</li>
+						<li class='nav-item'>
+							<a class='nav-link' href='#contact-section'>
+								<span>Contact</span>
+							</a>
+						</li>
+						<li class='nav-item'>
+							<a class='nav-link' href='#send-message'>
+								<span>Message me</span>
+							</a>
+						</li>
+						<!-- Jan25 - Added below help section -->
+						<li class='nav-item'>
+							<a class='nav-link' href='#help-section'>
+								<span>Help</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class='hero' id='home-section'>
+			<div class='home-slider owl-carousel'>
+				<div class='slider-item'>
+					<div class='overlay'/>
+					<div class='container'>
+						<div class='row d-md-flex no-gutters slider-text align-items-end justify-content-end' data-scrollax-parent='true'>
+							<div class='one-third js-fullheight order-md-last img' style='background-image:url(images/profile-pic-new.png);'>
+								<div class='overlay'/></div>
+							<div class='one-forth d-flex align-items-center ftco-animate' data-scrollax='properties: { translateY: &apos;70%&apos; }'>
+								<div class='text'>
+									<span class='subheading'>Hello!</span>
+									<h1 class='mb-4 mt-3'>I&#39;m 
+										
+										<span>Syed Mubeen</span>
+									</h1>
+									<!-- Element to contain animated typing -->
+									<span id='typing-animation'/>
+									<!-- Wrap the script in CDATA for Blogger compatibility -->
+									<script type='text/javascript'>
+                              &lt;!-- Initialize the typing animation --&gt;
+                              const typingAnimationElement = document.getElementById(&#39;typing-animation&#39;);
+                              
+                              // Create an array of typing text
+                              const typingTexts = [&#39;Software Developer     &#39;, &#39;YouTube Vlogger     &#39;, &#39;Video Editor    &#39;];
+                              
+                              // Create a function to display the typing animation for a given text
+                              function playTypingAnimation(text) {
+                                // Loop through each character and add it to the element
+                                for (let i = 0; i &lt; text.length; i++) {
+                                  setTimeout(() =&gt; {
+                                    typingAnimationElement.textContent += text[i];
+                                  }, i * 100); // Decreased delay to speed up the typing animation
+                                }
+                              
+                                // Once the animation is complete, reset the text and start over
+                                setTimeout(() =&gt; {
+                                  typingAnimationElement.textContent = &#39;&#39;;
+                                  playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                                }, text.length * 100); // Adjusted delay accordingly
+                              }
+                              
+                              // Start the typing animation loop
+                              playTypingAnimation(typingTexts[0]);
+                           </script>
+									<!-- Corrected line: Self-closing <br /> tags -->
+									<br/>
+									<br/>
+									<p>
+										<a class='btn btn-primary py-3 px-4' href='https://www.instagram.com/myself_mubeen._/'>My Instagram</a>
+										<!--<a class='btn py-3 px-4' href='https://www.instagram.com/myself_mubeen._/' onmouseout='this.style.backgroundColor=&apos;transparent&apos;; this.style.color=&apos;#E1306C&apos;; this.style.border=&apos;2px solid #FFEB3B&apos;;' onmouseover='this.style.backgroundColor=&apos;#E1306C&apos;; this.style.color=&apos;white&apos;; this.style.border=&apos;2px solid #E1306C&apos;;' style='background-color: transparent; color: #E1306C; border: 2px solid #FFEB3B; transition: all 0.3s ease-in-out;'>
+    My Instagram
+</a>-->
+										<!--<a class='btn btn-white btn-outline-white py-3 px-4' href='https://www.linkedin.com/in/syedmubeen16/'>My Linkedin</a>-->
+										<a class='btn py-3 px-4' href='https://www.linkedin.com/in/syedmubeen16/' onmouseout='this.style.backgroundColor=&apos;transparent&apos;; this.style.color=&apos;#0077B5&apos;; this.style.border=&apos;2px solid #FFEB3B&apos;;' onmouseover='this.style.backgroundColor=&apos;#0077B5&apos;; this.style.color=&apos;white&apos;; this.style.border=&apos;2px solid #0077B5&apos;;' style='background-color: transparent; color: #0077B5; border: 2px solid #FFEB3B; transition: all 0.3s ease-in-out;'>
+    My Linkedin
+</a>
+										<!--<a class='btn btn-white btn-outline-white py-3 px-4' href='https://www.linkedin.com/in/syedmubeen16/'>My Youtube</a>-->
+										<a class='btn py-3 px-4' href='https://www.youtube.com/channel/UCXzQwLh__y9g7l6nF84ytwQ' onmouseout='this.style.backgroundColor=&apos;transparent&apos;; this.style.color=&apos;#FF0000&apos;; this.style.border=&apos;2px solid #FFEB3B&apos;;' onmouseover='this.style.backgroundColor=&apos;#FF0000&apos;; this.style.color=&apos;white&apos;; this.style.border=&apos;2px solid #FF0000&apos;;' style='background-color: transparent; color: #FF0000; border: 2px solid #FFEB3B; transition: all 0.3s ease-in-out;'>
+    My Youtube
+</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='ftco-about img ftco-section ftco-no-pb' id='about-section'>
+			<div class='container'>
+				<div class='row'>
+					<div class='row d-flex align-items-stretch'>
+						<div class='col-md-6 col-lg-5 d-flex'>
+							<div class='img-about img d-flex align-items-stretch'>
+								<div class='overlay'>
+									<div class='row'>
+										<div class='col-sm-6 col-md-5'>
+											<div class='about-img'>
+												<img alt='' class='img-fluid rounded b-shadow-a' src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/images/profile-pic-new.png'/>
+											</div>
+										</div>
+										<div class='col-sm-6 col-md-7'>
+											<div class='about-info'>
+												<p>
+													<span class='title-s'>Name:</span>
+													<span>Syed Mubeen</span>
+												</p>
+												<p>
+													<span class='title-s'>Job Role:</span>
+													<span>Software Developer</span>
+												</p>
+												<p>
+													<span class='title-s'>Address:</span>
+													<span>Bangalore, Karnataka</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class='skill-mf'>
+										<p class='title-s-new'>Skills</p>
+										<span>Spring boot</span>
+										<div class='progress'>
+											<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='85' class='progress-bar' role='progressbar' style='width: 40%'/></div>
+										<span>SQL</span>
+										<div class='progress'>
+											<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='95' class='progress-bar' role='progressbar' style='width: 20%;'/></div>
+										<span>PYTHON</span>
+										<div class='progress'>
+											<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='85' class='progress-bar' role='progressbar' style='width: 30%'/></div>
+										<span>JAVA</span>
+										<div class='progress'>
+											<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='90' class='progress-bar' role='progressbar' style='width: 70%'/></div>
+										<span>Javascript</span>
+										<div class='progress'>
+											<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='85' class='progress-bar' role='progressbar' style='width: 35%'/></div>
+										<span>React</span>
+										<div class='progress'>
+											<div aria-valuemax='100' aria-valuemin='0' aria-valuenow='80' class='progress-bar' role='progressbar' style='width: 37%'/></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='col-md-6 col-lg-7 pl-lg-5 pb-5'>
+							<div class='row justify-content-start pb-3'>
+								<div class='col-md-12 heading-section ftco-animate'>
+									<h1 class='big'>About</h1>
+									<h2 class='mb-4'>About Me</h2>
+									<p>Java springboot developer at TCS, proficient in backend and skilled in crafting visually appealing webpages using HTML, CSS, Tailwind, Bootstrap, and Material UI. Well-versed in java, Python, C, and react, with a solid foundation in SQL. Eager to contribute to innovative fullstack development projects.</p>
+									<ul class='about-info mt-4 px-md-0 px-2'>
+										<li class='d-flex'>
+											<span>Profile:</span>
+											<span>Backend Developer &amp; Youtube vlogger</span>
+										</li>
+										<li class='d-flex'>
+											<span>Domain:</span>
+											<span>Software Development</span>
+										</li>
+										<li class='d-flex'>
+											<span>Education:</span>
+											<span>Bachelor of Electronics and Communication</span>
+										</li>
+										<li class='d-flex'>
+											<span>Language:</span>
+											<span>English, Hindi, Kannada and Telgu</span>
+										</li>
+										<li class='d-flex'>
+											<span>Other Skills:</span>
+											<span>Drawing proficiency, Observational skills, Creativity, Knowledge of art fundamentals, Technical proficiency, Communication skills, Time management, Adaptability &amp; Attention to detail</span>
+										</li>
+										<li class='d-flex'>
+											<span>Interest:</span>
+											<span>Traveling, Travel Photography, Teaching, Editing</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class='counter-wrap ftco-animate d-flex mt-md-3'>
+								<div class='text'>
+									<p>
+										<!--<a class='btn btn-primary py-3 px-3' href='https://www.linkedin.com/in/syedmubeen16/'>LinkedIn</a>-->
+										<a class='btn py-3 px-5' href='https://www.linkedin.com/in/syedmubeen16/' onmouseout='this.style.backgroundColor=&apos;lightyellow&apos;;' onmouseover='this.style.backgroundColor=&apos;yellow&apos;;' style='background-color: lightyellow; color: black; font-size: 20px; font-weight: bold; text-transform: uppercase; border-radius: 30px; padding: 15px 50px; transition: all 0.3s ease-in-out;'>
+    LinkedIn
+</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='ftco-section ftco-no-pb' id='resume-section'>
+			<div class='container'>
+				<div class='row justify-content-center pb-5'>
+					<div class='col-md-10 heading-section text-center ftco-animate'>
+						<h1 class='big big-2'>Resume</h1>
+						<h2 class='mb-4'>Resume</h2>
+						<p>Springboot developer, proficient in microservices, and skilled in crafting visually appealing webpages using HTML, CSS, Tailwind, Bootstrap, and Material UI. Well-versed in Python, C++, C, and Java, with a solid foundation in SQL. Eager to contribute to innovative fullstack development projects.</p>
+					</div>
+				</div>
+				<div class='row'>
+					<h1 class='big-4'>Experience</h1>
+					<div class='underline'/></div>
+				<br/>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='resume-wrap ftco-animate'>
+							<span class='date'>2024-Present</span>
+							<h2>Software Developer</h2>
+							<span class='position'>Arosys</span>
+							<p class='mt-4'>Tata cunsultancy services, a top Indian-based software company, specializes in fullstack development, e-Learning, media, and design. We craft custom software solutions to enhance functionality and productivity across industries.
+                  
+								
+								<ul>
+									<li>Working in development e-commerce applications based on springboot microservices and Sql/Javascript.</li>
+									<li>Experience of working in springboot microservices.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='resume-wrap ftco-animate'>
+							<span class='date'>2024-Present</span>
+							<h2>Java Developer</h2>
+							<span class='position'>ig/myself_mubeen</span>
+							<p class='mt-4'>Java Developer specializing in microservices and charcoal portraits. Self-taught and experienced in creating custom artwork. Find my portfolio on Instagram - @myself_mubeen
+                  
+								
+								<ul>
+									<li>Researching market trends to make better products.</li>
+									<li>Offering personalized art workshops for aspiring artists.</li>
+									<li>Collaborating with galleries to showcase my work.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class='row'>
+					<h1 class='big-4'>Education</h1>
+					<div class='underline'/></div>
+				<br/>
+				<div class='row'>
+					<div class='col-md-6'>
+						<div class='resume-wrap ftco-animate'>
+							<span class='date'>2018-2022</span>
+							<h2>Bachelor of Electronics and communication</h2>
+							<span class='position'>Vishweshwariya University</span>
+							<p class='mt-4'>Grade: distinction.</p>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='resume-wrap ftco-animate'>
+							<span class='date'>2016-2018</span>
+							<h2>Sri chaitanya PU college</h2>
+							<span class='position'>CBSE (PCMB)</span>
+							<p class='mt-4'>Grade: First class distinction.</p>
+						</div>
+					</div>
+				</div>
+				<div class='row justify-content-center mt-5'>
+					<div class='col-md-6 text-center ftco-animate'>
+						<p>
+							<a class='btn btn-primary py-4 px-5' href='https://drive.google.com/file/d/178kMDGVJrJeEH4WXfVttWPgzfbTiJumZ/view?usp=sharing'>Download CV</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='ftco-section ftco-no-pt ftco-no-pb ftco-counter img' id='section-counter'>
+			<div class='hid' style='visibility:hidden'>
+				<div class='container'>
+					<div class='row d-md-flex align-items-center'>
+						<div class='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div class='block-18'>
+								<div class='text'>
+									<strong class='number' data-number='20'>0</strong>
+									<span>TBU</span>
+								</div>
+							</div>
+						</div>
+						<div class='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div class='block-18'>
+								<div class='text'>
+									<strong class='number' data-number='50'>0</strong>
+									<span>TBU</span>
+								</div>
+							</div>
+						</div>
+                  // Uncomment for additional counters
+                  
+						
+						<div class='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div class='block-18'>
+								<div class='text'>
+									<strong class='number' data-number='1000'>0</strong>
+									<span>TBU</span>
+								</div>
+							</div>
+						</div>
+						<div class='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div class='block-18'>
+								<div class='text'>
+									<strong class='number' data-number='500'>0</strong>
+									<span>TBU</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='ftco-section ftco-hireme img margin-top' style='background-image: url(images/Bg-removed-syed.jpg)'>
+				<div class='row justify-content-center'>
+					<div class='col-md-7 ftco-animate text-center'>
+						<h2>Here&#39;s my
+							
+							<!--<span><button class='btn btn-primary py-3 px-5' id='gitbtn' onclick='gitClick()'>GitHub</button></span>-->
+							<span>
+								<button class='btn py-3 px-5' id='gitbtn' onclick='gitClick()' style='background-color: black; color: white; border: none; font-size: 20px; font-weight: bold;'>
+        GitHub
+    </button>
+							</span>
+						</h2>
+						<div class='heading'>
+							<h4>
+                        I love to code &amp; create awesome artworks.
+                     </h4>
+							<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class='ftco-section contact-section ftco-no-pb' id='contact-section'>
+			<div class='container'>
+				<div class='row justify-content-center mb-5 pb-3'>
+					<div class='col-md-7 heading-section text-center ftco-animate'>
+						<h1 class='big big-2'>Contact</h1>
+						<h2 class='mb-4'>Contact Me</h2>
+						<p>Below are the details to reach out to me!</p>
+					</div>
+				</div>
+				<div class='row d-flex contact-info mb-5'>
+					<div class='col-md-6 col-lg-3 d-flex ftco-animate'>
+						<div class='align-self-stretch box p-4 text-center'>
+							<div class='icon d-flex align-items-center justify-content-center'>
+								<span class='icon-map-signs'/>
+							</div>
+							<h3 class='mb-4'>Address</h3>
+							<p>Bangalore, Karnataka</p>
+						</div>
+					</div>
+					<div class='col-md-6 col-lg-3 d-flex ftco-animate'>
+						<div class='align-self-stretch box p-4 text-center'>
+							<div class='icon d-flex align-items-center justify-content-center'>
+								<span class='icon-phone2'/>
+							</div>
+							<h3 class='mb-4'>Contact Number</h3>
+							<p>
+								<a href='tel://7470695586'>+91 xxx-069-5586</a>
+							</p>
+						</div>
+					</div>
+					<div class='col-md-6 col-lg-3 d-flex ftco-animate'>
+						<div class='align-self-stretch box p-4 text-center'>
+							<div class='icon d-flex align-items-center justify-content-center'>
+								<span class='icon-paper-plane'/>
+							</div>
+							<h3 class='mb-4'>Email Address</h3>
+							<p>
+								<a href='mailto:syedmubeen064@gmail.com'>syedmubeen064@gmail.com</a>
+							</p>
+						</div>
+					</div>
+					<div class='col-md-6 col-lg-3 d-flex ftco-animate'>
+						<div class='align-self-stretch box p-4 text-center'>
+							<div class='icon d-flex align-items-center justify-content-center'>
+								<span class='icon-globe'/>
+							</div>
+							<h3 class='mb-4'>Download Resume</h3>
+							<p>
+								<a href='https://drive.google.com/file/d/1t57uhVY_7clqIRjNwqBeQ2LzsUi0yhmM/view'>resumelink</a>
+							</p>
+						</div>
+					</div>
+					<div class='container'>
+						<br/>
+						<br/>
+						<div class='row justify-content-center'>
+							<div class='col-md-7 ftco-animate text-center'>
+								<h2>Have a
+									
+									<span>
+                           Question?
+                           </span>
+								</h2>
+								<div class='que' id='send-message'>
+									<form action='https://api.web3forms.com/submit' method='POST'>
+										<input name='access_key' type='hidden' value='b509a929-13e9-4e2a-9836-e82a1913f53d'/>
+										<div class='row gy-4 gy-xl-5 p-4 p-xl-5'>
+											<div class='col-12'>
+												<label class='form-label' for='fullname'>Full Name
+                                    
+													
+													<span class='text-danger'>*</span>
+												</label>
+												<input class='form-control' id='fullname' name='fullname' required='required' type='text'/>
+											</div>
+											<div class='col-12 col-md-6'>
+												<label class='form-label' for='email'>Email
+                                    
+													
+													<span class='text-danger'>*</span>
+												</label>
+												<div class='input-group'>
+													<span class='input-group-text'>
+														<svg class='bi bi-envelope' fill='currentColor' height='16' viewBox='0 0 16 16' width='16'
+															xmlns='http://www.w3.org/2000/svg'>
+															<path d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z'/>
+														</svg>
+													</span>
+													<input class='form-control' id='email' name='email' required='required' type='email'/>
+												</div>
+											</div>
+											<div class='col-12 col-md-6'>
+												<label class='form-label' for='phone'>Phone Number</label>
+												<div class='input-group'>
+													<span class='input-group-text'>
+														<svg class='bi bi-telephone' fill='currentColor' height='16' viewBox='0 0 16 16' width='16'
+															xmlns='http://www.w3.org/2000/svg'>
+															<path d='M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z'/>
+														</svg>
+													</span>
+													<input class='form-control' id='phone' name='phone' type='tel'/>
+												</div>
+											</div>
+											<br/>
+											<div class='col-12'>
+												<label class='form-label' for='subject'>Subject
+                                    
+													
+													<span class='text-danger'>*</span>
+												</label>
+												<input class='form-control' id='subject' name='subject' required='required' type='text'/>
+											</div>
+											<div class='col-12'>
+												<label class='form-label' for='message'>Message
+                                    
+													
+													<span class='text-danger'>*</span>
+												</label>
+												<textarea class='form-control' id='message' name='message' required='required' rows='3'/>
+											</div>
+											<div class='col-12'>
+												<div class='d-grid'>
+													<br/>
+													<button class='btn btn-primary btn-lg' type='submit'>Send Message</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class='ftco-footer ftco-section'>
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-12 text-center'>
+						<p style='display: none;'>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                     Copyright &#169;
+							
+							<script>
+                        document.write(new Date().getFullYear());
+                     </script>
+                     All rights reserved | This template is made with
+                     
+							
+							<i aria-hidden='true' class='icon-heart color-danger'/>
+                     by
+                     
+							
+							<a href='https://colorlib.com' target='_blank'>Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- loader -->
+		<div class='show fullscreen' id='ftco-loader'>
+			<svg class='circular' height='48px' width='48px'>
+				<circle class='path-bg' cx='24' cy='24' fill='none' r='22' stroke='#eeeeee' stroke-width='4'/>
+				<circle class='path' cx='24' cy='24' fill='none' r='22' stroke='#F96D00' stroke-miterlimit='10' stroke-width='4'/>
+			</svg>
+		</div>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery-migrate-3.0.1.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/popper.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/bootstrap.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery.easing.1.3.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery.waypoints.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery.stellar.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/owl.carousel.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery.magnific-popup.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/aos.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/jquery.animateNumber.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/scrollax.min.js'/>
+		<script src='https://syedmubeencode.github.io/UI_projects/SYED_Portfolio_CSS/js/main.js'/>
+		<script>
+                 function gitClick() {
+                   window.location.href = &#39;https://github.com/syedmubeencode&#39;;
+                 }
+               
+      </script>
+		<main>
+			<b:section class='blog-posts' id='main' showaddelement='no'/>
+		</main>
+	</body>
+</html>
